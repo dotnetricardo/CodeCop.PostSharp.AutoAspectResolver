@@ -87,9 +87,8 @@ public class AppContainer : IAspectContainer
     }
 ```
 <h3>Bootstrapping</h3>
-You can bootstrap AutoAspectResolver in 2 ways.
-
-If you implemented the GetRegisteredAspectTypes method on your container you can use the AutoResove method like so:
+You can bootstrap AutoAspectResolver in 2 ways:
+1- If you implemented the GetRegisteredAspectTypes method on your container you can use the AutoResove method like so:
 ```
             // Instantiate the container (the one you made implement the IAspectContainer interface)
             var container = new AppContainer();
@@ -105,8 +104,7 @@ If you implemented the GetRegisteredAspectTypes method on your container you can
             StaticClass.StaticMethod();
             StaticClass.StaticMethod2();
 ```
-
-If not you should indicate the aspect types you want to auto resolve:
+2- If not you should indicate the aspect types you want to auto resolve:
 ```
             // Instantiate the container (the one you made implement the IAspectContainer interface)
             var container = new AppContainer();
@@ -123,3 +121,5 @@ If not you should indicate the aspect types you want to auto resolve:
             StaticClass.StaticMethod();
             StaticClass.StaticMethod2();
 ```
+<h3>Grab the nuget package</h3>
+AutoAspect resolver is available on nuget, just install the package and your good to go.
