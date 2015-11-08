@@ -27,7 +27,7 @@ public class AppContainer : IAspectContainer
             return _container.Resolve(type);
         }
 
-       // This interface method is needed to return (not resolve!!!) all types that implement PostSharp's IAspect interface  from the container
+       // This interface method is needed to return (not resolve!!!) all types that implement PostSharp's IAspect interface  registered in the container
         public IEnumerable<Type> GetRegisteredAspectTypes()
         {
             return _container.ComponentRegistry.Registrations
