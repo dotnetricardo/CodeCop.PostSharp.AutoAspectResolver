@@ -7,7 +7,7 @@ Ever wanted to inject dependencies into PostSharp method interception aspects in
 Notice that both these example aspects have a constructor dependency that will be automatically resolved at runtime, so just add the dependencies you need.
 ```
     [Serializable]
-    public class MyPostSharpAspect : MethodInterceptionAspect
+    public class MyPostSharpAspect : MethodInterceptionAspectt
     {
         private readonly ILogger _logger;
 
@@ -98,7 +98,7 @@ You can bootstrap AutoAspectResolver in 2 ways:
              // Pass the optional CodeCop license parameter or else you will be working in the Free mode
             var autoAspectResolver = new AutoAspectResolver(container);
          
-            // Tell AutoAspectResolver to automatically resolve all aspects (of type MethodInterceptionAspect and OnMethodBoundaryAspect)
+            // Tell AutoAspectResolver to automatically resolve all aspects 
             autoAspectResolver.AutoResolve();
             
             // Nothing more is needed, just start your app logic
