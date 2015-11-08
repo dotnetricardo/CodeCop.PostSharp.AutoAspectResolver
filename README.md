@@ -4,7 +4,7 @@ Ever wanted to inject dependencies into PostSharp method interception aspects in
 # Instructions 
 
 <h3>Create your PostSharp aspects of type MethodInterceptionAspect or OnMethodBoundaryAspect</h3>
-Notice that both these example aspects have a constructor dependency that will be automatically resolved at runtime, so just add the dependencies you need):
+Notice that both these example aspects have a constructor dependency that will be automatically resolved at runtime, so just add the dependencies you need:
 ```
     [Serializable]
     public class MyPostSharpAspect : MethodInterceptionAspect
