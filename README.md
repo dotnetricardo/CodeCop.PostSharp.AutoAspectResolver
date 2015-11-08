@@ -71,7 +71,7 @@ public class AppContainer : IAspectContainer
             _container = builder.Build();
         }
 
-        // Just implement your container resolving logic here
+        // Implement your container resolving logic here
         public object Resolve(Type type)
         {
             return _container.Resolve(type);
