@@ -1,7 +1,7 @@
-# CodeCop.PostSharp.AutoAspectResolver
+# CodeCop.PostSharp.AutoAspectResolver #
 Ever wanted to inject dependencies into PostSharp method interception aspects in a clean and easy way? Meet AutoAspectResolver, just plug-in you DI container of choice and watch PostSharp aspect dependencies being resolved at runtime with the help of CodeCop.
 
-# Instructions
+# Instructions #
 
 <h3>Create your PostSharp aspects of type MethodInterceptionAspect or a OnMethodBoundaryAspect (notice that both these aspects have a constructor dependency that will be automatically resolved at runtime, so just add the dependencies you need):</h3>
 ```
