@@ -105,7 +105,7 @@ You can bootstrap AutoAspectResolver in 2 ways:
             StaticClass.StaticMethod();
             StaticClass.StaticMethod2();
 ```
-2- If not you should indicate the aspect types you want to auto resolve:
+2- If you don't implemented the GetRegisteredAspectTypes method you should indicate the aspect types you want to auto resolve:
 ```
             // Instantiate the container (the one you made implement the IAspectContainer interface)
             var container = new AppContainer();
