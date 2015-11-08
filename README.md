@@ -52,7 +52,7 @@ Notice that both these example aspects have a constructor dependency that will b
         }
     }
 ```
-<h3>Pluging in your DI container:</h3>
+<h3>Pluging in your DI container</h3>
 First make your DI container implement the IAspectContainer interface, this is an example for the <a href="http://autofac.org/" target="_blank" >Autofac</a> container.
 ```
 public class AppContainer : IAspectContainer
@@ -86,7 +86,7 @@ public class AppContainer : IAspectContainer
         }
     }
 ```
-<h3>Bootstrapping:</h3>
+<h3>Bootstrapping</h3>
 You can bootstrap AutoAspectResolver in 2 ways.
 
 If you implemented the GetRegisteredAspectTypes method on your container you can use the AutoResove method like so:
@@ -95,6 +95,7 @@ If you implemented the GetRegisteredAspectTypes method on your container you can
             var container = new AppContainer();
 
              // Instantiate AutoAspectResolver passing your container instance
+             // Pass the optional CodeCop license parameter or else you will be working in the Free mode
             var autoAspectResolver = new AutoAspectResolver(container);
          
             // Tell AutoAspectResolver to automatically resolve all aspects (of type MethodInterceptionAspect and OnMethodBoundaryAspect)
@@ -111,6 +112,7 @@ If not you should indicate the aspect types you want to auto resolve:
             var container = new AppContainer();
             
             // Instantiate AutoAspectResolver passing your container instance
+            // Pass the optional CodeCop license parameter or else you will be working in the Free mode
             var autoAspectResolver = new AutoAspectResolver(container);
          
             // Individualy specify which aspects to auto resolve
