@@ -122,5 +122,6 @@ You can bootstrap AutoAspectResolver in 2 ways:
             StaticClass.StaticMethod();
             StaticClass.StaticMethod2();
 ```
+
 <h3>Grab the nuget package</h3>
 AutoAspect resolver is available on nuget, just install the <a href="https://www.nuget.org/packages/CodeCop.PostSharp.AutoAspectResolver/" target="_blank">package</a> and your good to go.
