@@ -3,7 +3,7 @@ Ever wanted to inject dependencies into PostSharp method interception aspects in
 
 # Instructions
 <h3>Pluging in your DI container:</h3>
-First make your DI container implement the IAspectContainer interface, this is an example for the <a href="http://autofac.org/" target="_blank" >Autofac</a>.
+First make your DI container implement the IAspectContainer interface, this is an example for the <a href="http://autofac.org/" target="_blank" >Autofac</a> container.
 ```
 public class AppContainer : IAspectContainer
     {
@@ -21,12 +21,13 @@ public class AppContainer : IAspectContainer
             _container = builder.Build();
         }
 
+        // Just implement your container resolving logic here
         public object Resolve(Type type)
         {
             return _container.Resolve(type);
         }
 
-       // This interface method is needed to return (not resolve!!) all types that implement PostSharp's IAspect interface
+       // This interface method is needed to return (not resolve!!!) all types that implement PostSharp's IAspect interface
         public IEnumerable<Type> GetRegisteredAspectTypes()
         {
             return _container.ComponentRegistry.Registrations
